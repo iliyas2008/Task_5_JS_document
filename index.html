@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- fontawsome css -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+</head>
+<body>
+
+<!-- Nav menu icon end -->
+<nav class="my-floating-nav">
+    <ul>
+        <li><a href="#"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Menu</a></li>
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"    aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Back</h5>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column flex-end">
+                    <a href="#about" class="btn btn-primary mt-3" >About</a>
+                    <a href="#history" class="btn btn-primary mt-3" >History</a>
+                    <a href="#runlocation" class="btn btn-primary mt-3" >Where JS run?</a>
+                    <a href="#datatypes" class="btn btn-primary mt-3" >Data Types</a>
+                    <a href="#variables" class="btn btn-primary mt-3" >Variables</a>
+                    <a href="#operators" class="btn btn-primary mt-3" >Operators</a>
+                    <a href="#conditions" class="btn btn-primary mt-3" >Conditions</a>
+                    <a href="#loops" class="btn btn-primary mt-3" >Loops</a>
+                    <a href="#functions" class="btn btn-primary mt-3" >Functions</a>
+                </div>
+            </div>
+    </ul>
+    
+    
+</nav>
+  <!-- Nav menu icon end -->
+
+
+    <h1 class="text-center">JavaScript</h1>
+        
+    <div id="about" class="container bg-secondary text-white rounded p-3">
+        <h2 class="text-center">About</h2>
+        <p><i class="fas fa-anchor text-warning me-2"></i>JavaScript, often abbreviated <em>JS</em>, is a scripting language that is one of the core technologies of the World Wide Web, in addition to HTML and CSS.</p> 
+        <p><i class="fas fa-ancho text-warning me-2r"></i>Over 97% of websites use JavaScript on the client side for web page behavior.</p> 
+        <p><i class="fas fa-anchor text-warning me-2"></i>All major web browsers have a dedicated JavaScript engine to execute the code on the user's device.</p> 
+        <p><i class="fas fa-anchor text-warning me-2"></i>JavaScript, is an interpreted language. JavaScript engines employ a special kind of compiler called a Just In Time (JIT) compiler that takes the interpreted code one step further and lets the computer run the result.</p>
+        <p><i class="fas fa-anchor text-warning me-2"></i>Historically, JavaScript was inextricably tied to the DOM (Document Object Model) API, which is what we use to manipulate content on a webpage.</p>
+        <p><i class="fas fa-anchor text-warning me-2"></i>In the wild, JavaScript often has to deal with asynchronous operations: for example, requesting and then displaying data from a database.</p>
+        
+    </div>
+      <div id="history" class="container p-3">
+        <h1>History</h1>
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-action list-group-item-primary">JavaScript was created at Netscape Communications by Brendan Eich in 1995. Netscape and Eich designed JavaScript as a scripting language.</li>
+            <li class="list-group-item list-group-item-action list-group-item-primary">Initially known as LiveScript, Netscape changed the name to JavaScript so they could position it as a companion for the Java language, a product of their partner, Sun Microsystems.</li>
+            <li class="list-group-item list-group-item-action list-group-item-primary">JavaScript is in no way related to the Java programming language.</li>
+            <li class="list-group-item list-group-item-action list-group-item-primary">In 2008, the creation of Google's open-source Chrome V8, a high-performance JavaScript engine, provided a crucial turning point for JavaScript.</li>
+            <li class="list-group-item list-group-item-action list-group-item-primary">Ryan Dahl released an open-source, cross-platform environment called Node.js. It provided a way to run JavaScript code from outside a browser.</li>
+            <li class="list-group-item list-group-item-action list-group-item-primary">Today, you can use JavaScript to write all kinds of applications, including browser, server, mobile, and desktop applications. Most major online companies today, including Facebook, Twitter, Netflix, and Google, all use JavaScript in their products.</li>
+        </ul>
+      </div>
+      <div id="runlocation" class="container mb-3">
+          <h1>Where JS run?</h1>
+          <p>JavaScript will run in browser and it can be viewed in <mark class="bg-primary text-white rounded">Console</mark></p>
+          <p><mark class="bg-primary text-white rounded">Console</mark> can be viewed by pressing <code class="bg-warning rounded p-1">F12</code></p>
+          <img class="img-fluid img-thumbnail rounded" src="imgs/Console.png" alt="">
+      </div>
+    <div id="datatypes" class="container">
+        <h1>Data Types</h1>
+        <p>There are five major data types available,</p>
+        <div class="accordion" id="data-type-accordion">
+            <div class="accordion-item">
+                <h2>
+                    <div class="accordion-header" id="head1">
+                        <button class="accordion-button"  type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                            <strong>String</strong>
+                        </button>
+                    </div>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse hide" aria-labelledby="head1" data-bs-parent="#data-type-accordion">
+                    <div class="accordion-body">
+                        <p>A string is a list of characters in a specific sequence.</p>
+                        <p>String can be written either wth double or single quotation marks, for example <code>"Hi I am a string"</code> and <code>'I am also a string'</code>.</p>
+                        <p>A recent JavaScript addition is template literals. They use backticks (<code>`</code>) and enable an operation called <em>string interpolation</em>.</p>
+                        <p>For example <code>`5 plus 5 equals ${5 + 5}`</code> will produce an output of <code>'5 plus 5 equals 10'</code>.</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="accordion-item">
+                <h2>
+                    <div class="accordion-header" id="head2">
+                        <button class="accordion-button"  type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                            <strong>Number</strong>
+                        </button>
+                    </div>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse hide" aria-labelledby="head2" data-bs-parent="#data-type-accordion">
+                    <div class="accordion-body">
+                        <p>The Number data type represents all kinds of numbers in JavaScript.</p>
+                        <p>For example, <code>1, 2, -3, 4.5, -6.77, 234891234</code> - these are all treated as numbers.</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="accordion-item">
+                <h2>
+                    <div class="accordion-header" id="head3">
+                        <button class="accordion-button"  type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                            <strong>Undefined</strong>
+                        </button>
+                    </div>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse hide" aria-labelledby="head3" data-bs-parent="#data-type-accordion">
+                    <div class="accordion-body">
+                        <p>When a variable is not defined, its value is given by <code>undefined</code>.</p>
+                        <p> We can also explicitly use the literal <code>undefined</code>.</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="accordion-item">
+                <h2>
+                    <div class="accordion-header" id="head4">
+                        <button class="accordion-button"  type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                            <strong>Null</strong>
+                        </button>
+                    </div>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse hide" aria-labelledby="head4" data-bs-parent="#data-type-accordion">
+                    <div class="accordion-body">
+                        <p>It is similar to <code>undefined</code>.</p>
+                        <p>The chief difference between <code>null</code> and <code>undefined</code> is that you must use <code>null</code> explicitly if you want to use it; <code>undefined</code> can arise implicitly.</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="accordion-item">
+                <h2>
+                    <div class="accordion-header" id="head5">
+                        <button class="accordion-button"  type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                            <strong>Boolean</strong>
+                        </button>
+                    </div>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse hide" aria-labelledby="head5" data-bs-parent="#data-type-accordion">
+                    <div class="accordion-body">
+                        <p>There are two boolean values: <code>true</code> and <code>false</code>.</p>
+                    </div>
+                  </div>
+            </div>
+        </div>  
+    </div>
+    <div id="variables" class="container">
+        <h1>Variables</h1>
+        <p>Variable allows us to store, retrieve and change the stored information.</p>
+        <h2>How to declare ?</h2>
+        <p>Variable is declared with <code>var</code> keyword and assignment operator  <code> =</code> .</p>
+        <p><em>Example:</em> <code> var newVariable = "It is a string variable";</code></p>
+        <p>Like the <code>var</code> keyword, we can also use the <code>let</code> and <code>const</code> keyword to declare variables.</p>
+        <p><em>Example:</em> <br><code> let x = 10; <br> const message = "Hi";</code></p>
+        <h4>Difference among <code>var</code>, <code>let</code> and <code>const</code></h4>
+        <ul class="list-group">
+            <li class="list-group-item"><code>var</code> can be re-declared and updated</li>
+            <p><em>Example:</em> <br><code> var mytext = "hello"; <br> var mytext = "Hai"; <span class="text-success">// no error</span> </code></p>
+            <li class="list-group-item"><code>let</code> can be updated but not re-declared</li>
+            <p><em>Example:</em> <br><code> let mytext = "hey"; <br> mytext = "Hello"; <span class="text-success">// no error</span> </code></p>
+            <p><em>Example:</em> <br><code> let mytext = "hey"; <br> let mytext = "Hello"; <span class="text-success">// Uncaught SyntaxError: Identifier 'mytext' has already been declared</span> </code></p>
+            <li class="list-group-item"><code>const</code> cannot be updated or re-declared</li>
+            <p><em>Example:</em> <br><code> const mytext = "hey"; <br> mytext = "Hello"; <span class="text-success">// Uncaught TypeError: Assignment to constant variable</span> </code></p>
+            <p><em>Example:</em> <br><code> const mytext = "hey"; <br> const mytext = "Hello"; <span class="text-success">// Uncaught SyntaxError: Identifier 'mytext' has already been declared</span> </code></p>
+        </ul>
+    </div>
+    <div id="operators" class="container">
+        <h1>Operators</h1>
+        <p>Listed below are Javascript operators</p>
+        <div class="accordion" id="operator-accordion">
+            <div class="accordion-item">
+                <h2>
+                    <div class="accordion-header" id="head1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse_operator1" aria-expanded="false" aria-controls="collapse_operator1">
+                            <strong>Arithmetic Operators</strong>
+                        </button>
+                    </div>
+                </h2>
+                <div id="collapse_operator1" class="accordion-collapse collapse hide" aria-labelledby="head1"
+                    data-bs-parent="#operator-accordion">
+                    <div class="accordion-body">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-action list-group-item-primary">Addition ( + )</li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">Subtraction ( &dash; )
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">Multiplication ( * )</li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">Division ( / )</li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">Modulus ( % )</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h2>
+                    <div class="accordion-header" id="head2">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse_operator2" aria-expanded="false" aria-controls="collapse_operator2">
+                            <strong>Relational/Comparison Operators</strong>
+                        </button>
+                    </div>
+                </h2>
+                <div id="collapse_operator2" class="accordion-collapse collapse hide" aria-labelledby="head2"
+                    data-bs-parent="#operator-accordion">
+                    <div class="accordion-body">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                Is equal to ( == )
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                Not equal to ( != )
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                Identical –equal and of the same type ( === )
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                Not equal value or not equal type ( !== )
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                Greater than ( > )
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                Less than ( &lt; )
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                Greater than or Equal to ( >= )
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                Less than or Equal to ( &lt;= )
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2>
+                    <div class="accordion-header" id="head3">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse_operator3" aria-expanded="false" aria-controls="collapse_operator3">
+                            <strong>Bitwise Operators</strong>
+                        </button>
+                    </div>
+                </h2>
+                <div id="collapse_operator3" class="accordion-collapse collapse hide" aria-labelledby="head3"
+                    data-bs-parent="#operator-accordion">
+                    <div class="accordion-body">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                Bitwise AND ( & ) 
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                Bitwise OR ( | )
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                Bitwise XOR ( ^ )
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                Bitwise NOT ( ~ )
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                Bitwise Left Shift ( &lt;&lt; )
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                Bitwise Right Shift ( >> )
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                Bitwise Right Shift with Zero ( >>> )
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2>
+                    <div class="accordion-header" id="head4">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse_operator4" aria-expanded="false" aria-controls="collapse_operator4">
+                            <strong>Logical Operators</strong>
+                        </button>
+                    </div>
+                </h2>
+                <div id="collapse_operator4" class="accordion-collapse collapse hide" aria-labelledby="head4"
+                    data-bs-parent="#operator-accordion">
+                    <div class="accordion-body">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                Logical AND ( && )  
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                Logical OR ( || )
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                Logical NOT ( ! )
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2>
+                    <div class="accordion-header" id="head5">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse_operator5" aria-expanded="false" aria-controls="collapse_operator5">
+                            <strong>Assignment Operators</strong>
+                        </button>
+                    </div>
+                </h2>
+                <div id="collapse_operator5" class="accordion-collapse collapse hide" aria-labelledby="head5"
+                    data-bs-parent="#operator-accordion">
+                    <div class="accordion-body">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                Assign ( = )
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                Add and Assignment ( += )
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                Subtract and Assignment ( &dash;= )
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                Multiply and Assignment ( *= )
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                Divide and Assignment ( /= )
+                            </li>
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                Modulus and Assignment ( %= )
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2>
+                    <div class="accordion-header" id="head6">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse_operator6" aria-expanded="false" aria-controls="collapse_operator6">
+                            <strong>Ternary Operators</strong>
+                        </button>
+                    </div>
+                </h2>
+                <div id="collapse_operator6" class="accordion-collapse collapse hide" aria-labelledby="head6"
+                    data-bs-parent="#operator-accordion">
+                    <div class="accordion-body">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                Variable = condition <code> ? </code>true value <code> : </code> false value
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2>
+                    <div class="accordion-header" id="head7">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse_operator7" aria-expanded="false" aria-controls="collapse_operator7">
+                            <strong>Typeof Operators</strong>
+                        </button>
+                    </div>
+                </h2>
+                <div id="collapse_operator7" class="accordion-collapse collapse hide" aria-labelledby="head7"
+                    data-bs-parent="#operator-accordion">
+                    <div class="accordion-body">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                The <code> typeof </code>operator returns the data type of the variable.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2>
+                    <div class="accordion-header" id="head8">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse_operator8" aria-expanded="false" aria-controls="collapse_operator8">
+                            <strong>Instanceof Operators</strong>
+                        </button>
+                    </div>
+                </h2>
+                <div id="collapse_operator8" class="accordion-collapse collapse hide" aria-labelledby="head8"
+                    data-bs-parent="#operator-accordion">
+                    <div class="accordion-body">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                The <code> instanceof </code>operator checks if the object is an instance of the given type.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2>
+                    <div class="accordion-header" id="head9">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse_operator9" aria-expanded="false" aria-controls="collapse_operator9">
+                            <strong>Concatenation Operators</strong>
+                        </button>
+                    </div>
+                </h2>
+                <div id="collapse_operator9" class="accordion-collapse collapse hide" aria-labelledby="head9"
+                    data-bs-parent="#operator-accordion">
+                    <div class="accordion-body">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-action list-group-item-primary">
+                                This operator joins the string at the left-hand side with the string at the right-hand side. If the second operand is not a string, it is converted to a string automatically. For example, <code> "10" + "20" </code> It would be <code>1020</code>, not <code>30</code>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="conditions" class="container">
+        <h1>Conditions</h1>
+        <p>Conditional statements are:</p>
+        <ul>
+            <li><code>if</code></li>
+            <li><code>if ... else</code></li>
+            <li><code>if ... else if</code></li>
+            <li><code>switch</code></li>
+        </ul>
+    </div>
+
+    <div id="loops" class="container">
+        <h1>Loops</h1>
+        <p>Below are the loops in JavaScript</p>
+        <ul>
+            <li class="list-group-item text-primary"><code>for</code></li>
+            <pre class="text-warning bg-secondary rounded p-2">
+                for (let i = 0; i <= 5; i++) {
+                    console.log(i);
+                }
+            </pre>
+            <li class="list-group-item text-primary"><code>for ... of</code></li>
+            <pre class="text-warning bg-secondary rounded p-2">
+                for(let i of "String"){
+                	console.log(i)
+                }
+            </pre>
+            <li class="list-group-item text-primary"><code>for ... in</code></li>
+            <pre class="text-warning bg-secondary rounded p-2">
+                var arr = [10, 20, 30, 40, 50];
+                for (var index in arr) {
+                     console.log(arr[index]) 
+                    }
+            </pre>
+            <li class="list-group-item text-primary"><code>while</code></li>
+            <pre class="text-warning bg-secondary rounded p-2">
+                var counter = 0;
+                while (counter < 10) {
+                    console.log('Number : ' + counter);
+                    counter++;
+                }
+            </pre>
+            <li class="list-group-item text-primary"><code>do ... while</code></li>
+            <pre class="text-warning bg-secondary rounded p-2">
+                var i = 0;
+                do {
+                    console.log(i + " ");
+                    i++; // incrementing i by 1
+                } while (i < 5);
+            </pre>
+        </ul>
+    </div>
+    <div id="functions" class="container">
+        <h1>Functions</h1>
+        <p>Below are the list of functions available:</p>
+        <ul>
+            <li class="list-group-item text-primary">Named function without params</li>
+            <pre class="text-warning bg-secondary rounded p-2">
+                function printHello () {
+                     console.log(‘Hello’) 
+                    };
+            </pre>
+            <li class="list-group-item text-primary">Function with params</li>
+            <pre class="text-warning bg-secondary rounded p-2">
+                function show(message) {
+                        console.log(message);
+                    };
+            </pre>
+            <li class="list-group-item text-primary">Anonymous function</li>
+            <pre class="text-warning bg-secondary rounded p-2">
+                var add = function (a, b) {
+                    console.log(a + b)
+                }
+            </pre>
+            <li class="list-group-item text-primary">Immediatedly invoked function</li>
+            <pre class="text-warning bg-secondary rounded p-2">
+                (function () {
+                    console.log("IIFE Executed ");
+                })();
+            </pre>
+            <li class="list-group-item text-primary">Callback function</li>
+            <pre class="text-warning bg-secondary rounded p-2">
+                console.log("hi")
+                setTimeout(function() {
+                    // runs after 3 seconds
+                console.log('Hello callback setTimeout function')
+                }, 3000)
+                console.log("bye")
+            </pre>
+            <li class="list-group-item text-primary">Date function</li>
+            <pre class="text-warning bg-secondary rounded p-2">
+                new Date();
+            </pre>
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th>Methods</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>getDate()</td>
+                        <td>Returns the day of the month (from 1-31)</td>
+                    </tr>
+                    <tr>
+                        <td>getDay()</td>
+                        <td>Returns the day of the week (from 0-6)</td>
+                    </tr>
+                    <tr>
+                        <td>getFullYear()</td>
+                        <td>Returns the year</td>
+                    </tr>
+                    <tr>
+                        <td>getHours()</td>
+                        <td>Returns the hour (from 0-23)</td>
+                    </tr>
+                    <tr>
+                        <td>getMilliseconds()</td>
+                        <td>Returns the milliseconds (from 0-999)</td>
+                    </tr>
+                    <tr>
+                        <td>getMinutes()</td>
+                        <td>Returns the minutes (from 0-59)</td>
+                    </tr>
+                    <tr>
+                        <td>getMonth()</td>
+                        <td>Returns the month (from 0-11)</td>
+                    </tr>
+                    <tr>
+                        <td>getSeconds()</td>
+                        <td>Returns the seconds (from 0-59)</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </ul>
+    </div>
+<!-- Scripts Start -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Scripts End -->
+</body>
+</html>

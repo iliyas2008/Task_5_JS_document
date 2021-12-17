@@ -1,0 +1,36 @@
+/* Nav icon styles start */
+.my-floating-nav {
+    z-index: 9999;
+    position: fixed;
+    width: 6rem;
+    margin-left: -1rem;
+    margin-top: 6rem;
+    transition: all 0.3s linear;
+}
+
+.my-floating-nav ul {
+    margin-top: 0;
+    margin-bottom: 0rem
+}
+
+.my-floating-nav li {
+    height: 45px;
+    position: relative;
+    list-style: none;
+}
+
+.my-floating-nav li a {
+    color: #fff !important;
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 45px;
+    padding-left: 15%;
+    border-radius: 10%;
+    border-bottom: 1px solid rgba(255, 255, 150, .4);
+    transition: all .3s linear;
+    text-decoration: none !important;
+    background: #E1306C;
+}
+
+/* Nav icon styles end */
